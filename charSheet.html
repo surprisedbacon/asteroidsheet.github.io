@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="dndjs.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel&display=swap">
+    <link rel="stylesheet" href="dndstyle.css">
+  </head>
+  <body onload="domReady()">
+    <div id="title">〖 CHARACTER SHEET 〗</div>
+    <div class="p-box" name="top boxes">
+      <table class="table">
+        <tr>
+          <th>credits</th>
+          <th>bounties</th>
+        </tr>
+        <tr>
+          
+        </tr>
+        <tr>
+          <th>name</th>
+          <th>age</th>
+          <th>class</th>
+          <th>race</th>
+        </tr>
+        <tr>
+          <td><input type="text" name="attr_character_name"></td>
+          <td><input type="number" name="attr_character_age"></td>
+          <td><input type="text" name="Class"></td>
+          <td><input type="text" name="Race"></td>
+        </tr>
+        <tr>
+          <th>level</th>
+          <th>exp (earned)</th>
+          <th>gender</th>
+          <th>sexuality</th>
+        </tr>
+        <tr>
+          <td><input type="number" name="Level"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+        </tr>
+      </table>
+    </div>
+    <br>
+    <div class="p-box" name="">
+      <div class="item">SKILL SET</div>
+      <div class="item" id="middle">
+        BIOGRAPHY
+        <br>
+        <table>
+          <tr>
+            <th>CHILDHOOD</th>
+          </tr>
+          <tr>
+            <td><textarea rows="5" cols="50"></textarea></td>
+          </tr>
+          <tr>
+            <th>ADULTHOOD</th>
+          </tr>
+          <tr>
+            <td><textarea rows="5" cols="50"></textarea></td>
+          </tr>
+          <tr>
+            <th>TRAITS</th>
+          </tr>
+          <tr>
+            <td><textarea rows="5" cols="50"></textarea></td>
+          </tr>
+        </table>
+      </div>
+      <div class="item">
+        IMAGE
+        <br>
+        <table>
+          <input type="file" accept="image">
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
