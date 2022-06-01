@@ -1,164 +1,172 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="dndjs.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel&display=swap">
-    <link rel="stylesheet" href="dndstyle.css">
-  </head>
-  <body onload="domReady()">
-    <div id="title">〖 CHARACTER SHEET 〗</div>
-    <div class="p-box" name="box1">
-      <table class="table">
-        <tr>
-          <th></th>
-          <th>credits</th>
-          <th>bounties</th>
-        </tr>
-        <tr>
-          <td></td>
-          <td><input type="number" name="Credits"></td>
-          <td><input type="number" name="Bounty"></td>
-        </tr>
-        <tr>
-          <th>name</th>
-          <th>age</th>
-          <th>class</th>
-          <th>race</th>
-        </tr>
-        <tr>
-          <td><input type="text" name="attr_character_name"></td>
-          <td><input type="number" name="attr_character_age"></td>
-          <td><input type="text" name="Class"></td>
-          <td><input type="text" name="Race"></td>
-        </tr>
-        <tr>
-          <th>level</th>
-          <th>exp (earned)</th>
-          <th>gender</th>
-          <th>sexuality</th>
-        </tr>
-        <tr>
-          <td><input type="number" name="Level"></td>
-          <td><input type="number" name="Exp"></td>
-          <td><input type="text" name="Gender"></td>
-          <td><input type="text" name="Sexuality"></td>
-        </tr>
-      </table>
-    </div>
-    <br>
-    <div class="p-box" name="box2">
-      <div class="item">〚 SKILL SET 〛
-        <table class="p-box">
-          <tr>
-            <th class="skill-cont">skill</th>
-            <th class="skill-cont">level</th>
-          </tr>
-          <tr>
-            <td class="skill-cont">perception</td>
-            <td class="skill-cont"><input type="number" name="attr_per" min="0" max="20"></td>
-          </tr>
-          <tr>
-            <td class="skill-cont">strength</td>
-            <td class="skill-cont"><input type="number" name="attr_str" min="0" max="20"></td>
-          </tr>
-          <tr>
-            <td class="skill-cont">agility</td>
-            <td class="skill-cont"><input type="number" name="attr_agi" min="0" max="20"></td>
-          </tr>
-          <tr>
-            <td class="skill-cont">dexterity</td>
-            <td class="skill-cont"><input type="number" name="attr_dex" min="0" max="20"></td>
-          </tr>
-          <tr>
-            <td class="skill-cont">endurance</td>
-            <td class="skill-cont"><input type="number" name="attr_end" min="0" max="20"></td>
-          </tr>
-          <tr>
-            <td class="skill-cont">cooking</td>
-            <td class="skill-cont"><input type="number" name="attr_per" min="0" max="20"></td>
-          </tr>
-          <tr>
-            <td class="skill-cont">plants</td>
-            <td class="skill-cont"><input type="number" name="attr_per" min="0" max="20"></td>
-          </tr>
-          <tr>
-            <td class="skill-cont">animals</td>
-            <td class="skill-cont"><input type="number" name="attr_per" min="0" max="20"></td>
-          </tr>
-          <tr>
-            <td class="skill-cont">crafting</td>
-            <td class="skill-cont"><input type="number" name="attr_per" min="0" max="20"></td>
-          </tr>
-          <tr>
-            <td class="skill-cont">engineering</td>
-            <td class="skill-cont"><input type="number" name="attr_per" min="0" max="20"></td>
-          </tr>
-          <tr>
-            <td class="skill-cont">medical</td>
-            <td class="skill-cont"><input type="number" name="attr_per" min="0" max="20"></td>
-          </tr>
-          <tr>
-            <td class="skill-cont">intelligence</td>
-            <td class="skill-cont"><input type="number" name="attr_int" min="0" max="20"></td>
-          </tr>
-          <tr>
-            <td class="skill-cont">social</td>
-            <td class="skill-cont"><input type="number" name="attr_per" min="0" max="20"></td>
-          </tr>
-          <tr>
-            <td class="skill-cont">technology</td>
-            <td class="skill-cont"><input type="number" name="attr_per" min="0" max="20"></td>
-          </tr>
-          <tr>
-            <td class="skill-cont">mining</td>
-            <td class="skill-cont"><input type="number" name="attr_per" min="0" max="20"></td>
-          </tr>
-          <tr>
-            <td class="skill-cont">pilot</td>
-            <td class="skill-cont"><input type="number" name="attr_per" min="0" max="20"></td>
-          </tr>
-        </table>
-      </div>
-      <div class="item" id="middle">〚 BIOGRAPHY 〛
-        <br>
-        <table>
-          <tr>
-            <th>CHILDHOOD</th>
-          </tr>
-          <tr>
-            <td><input type="text" name="ch_title" placeholder="Name of childhood..."></td>
-          </tr>
-          <tr>
-            <td><textarea name="ch_bio" rows="5" cols="50"></textarea></td>
-          </tr>
-          <tr>
-            <th>ADULTHOOD</th>
-          </tr>
-          <tr>
-            <td><input type="text" name="ah_title" placeholder="Name of adulthood..."></td>
-          </tr>
-          <tr>
-            <td><textarea name="ah_bio" rows="5" cols="50"></textarea></td>
-          </tr>
-          <tr>
-            <th>TRAITS</th>
-          </tr>
-          <tr>
-            <td><textarea name="traits" rows="5" cols="50"></textarea></td>
-          </tr>
-        </table>
-      </div>
-      <div class="item">〚 IMAGE 〛
-        <br>
-        <table>
-          <input type="file" accept="image">
-        </table>
-      </div>
-    </div>
-    <div class="p-box" name="box3">
-      <table class="table">
 
+<head>
+  <script src="dndjs.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel&display=swap">
+  <link rel="stylesheet" href="dndstyle.css">
+</head>
+
+<body onload="domReady()">
+  <div id="title">〖 CHARACTER SHEET 〗</div>
+  <div class="p-box" name="box1">
+    <table class="table">
+      <tr>
+        <th></th>
+        <th>credits</th>
+        <th>bounties</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="number" name="Credits"></td>
+        <td><input type="number" name="Bounty"></td>
+      </tr>
+      <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>class</th>
+        <th>race</th>
+      </tr>
+      <tr>
+        <td><input type="text" name="attr_character_name"></td>
+        <td><input type="number" name="attr_character_age"></td>
+        <td><input type="text" name="Class"></td>
+        <td><input type="text" name="Race"></td>
+      </tr>
+      <tr>
+        <th>level</th>
+        <th>exp (earned)</th>
+        <th>gender</th>
+        <th>sexuality</th>
+      </tr>
+      <tr>
+        <td><input type="number" name="Level"></td>
+        <td><input type="number" name="Exp"></td>
+        <td><input type="text" name="Gender"></td>
+        <td><input type="text" name="Sexuality"></td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <div class="p-box" name="box2">
+    <div class="item">〚 SKILL SET 〛
+      <table class="p-box">
+        <tr>
+          <th class="cont">skill</th>
+          <th class="cont">level</th>
+        </tr>
+        <tr>
+          <td class="cont">perception</td>
+          <td class="cont"><input type="number" name="attr_per" min="0" max="20"></td>
+        </tr>
+        <tr>
+          <td class="cont">strength</td>
+          <td class="cont"><input type="number" name="attr_str" min="0" max="20"></td>
+        </tr>
+        <tr>
+          <td class="cont">agility</td>
+          <td class="cont"><input type="number" name="attr_agi" min="0" max="20"></td>
+        </tr>
+        <tr>
+          <td class="cont">dexterity</td>
+          <td class="cont"><input type="number" name="attr_dex" min="0" max="20"></td>
+        </tr>
+        <tr>
+          <td class="cont">endurance</td>
+          <td class="cont"><input type="number" name="attr_end" min="0" max="20"></td>
+        </tr>
+        <tr>
+          <td class="cont">cooking</td>
+          <td class="cont"><input type="number" name="attr_per" min="0" max="20"></td>
+        </tr>
+        <tr>
+          <td class="cont">plants</td>
+          <td class="cont"><input type="number" name="attr_per" min="0" max="20"></td>
+        </tr>
+        <tr>
+          <td class="cont">animals</td>
+          <td class="cont"><input type="number" name="attr_per" min="0" max="20"></td>
+        </tr>
+        <tr>
+          <td class="cont">crafting</td>
+          <td class="cont"><input type="number" name="attr_per" min="0" max="20"></td>
+        </tr>
+        <tr>
+          <td class="cont">engineering</td>
+          <td class="cont"><input type="number" name="attr_per" min="0" max="20"></td>
+        </tr>
+        <tr>
+          <td class="cont">medical</td>
+          <td class="cont"><input type="number" name="attr_per" min="0" max="20"></td>
+        </tr>
+        <tr>
+          <td class="cont">intelligence</td>
+          <td class="cont"><input type="number" name="attr_int" min="0" max="20"></td>
+        </tr>
+        <tr>
+          <td class="cont">social</td>
+          <td class="cont"><input type="number" name="attr_per" min="0" max="20"></td>
+        </tr>
+        <tr>
+          <td class="cont">technology</td>
+          <td class="cont"><input type="number" name="attr_per" min="0" max="20"></td>
+        </tr>
+        <tr>
+          <td class="cont">mining</td>
+          <td class="cont"><input type="number" name="attr_per" min="0" max="20"></td>
+        </tr>
+        <tr>
+          <td class="cont">pilot</td>
+          <td class="cont"><input type="number" name="attr_per" min="0" max="20"></td>
+        </tr>
       </table>
     </div>
-  </body>
+    <div class="item" id="middle">〚 BIOGRAPHY 〛
+      <br>
+      <table>
+        <tr>
+          <th>CHILDHOOD</th>
+        </tr>
+        <tr>
+          <td><input type="text" name="ch_title" placeholder="Name of childhood..."></td>
+        </tr>
+        <tr>
+          <td><textarea name="ch_bio" rows="5" cols="50"></textarea></td>
+        </tr>
+        <tr>
+          <th>ADULTHOOD</th>
+        </tr>
+        <tr>
+          <td><input type="text" name="ah_title" placeholder="Name of adulthood..."></td>
+        </tr>
+        <tr>
+          <td><textarea name="ah_bio" rows="5" cols="50"></textarea></td>
+        </tr>
+        <tr>
+          <th>TRAITS</th>
+        </tr>
+        <tr>
+          <td><textarea name="traits" rows="5" cols="50"></textarea></td>
+        </tr>
+      </table>
+    </div>
+    <div class="item">〚 IMAGE 〛
+      <br>
+      <table>
+        <input type="file" accept="image">
+      </table>
+    </div>
+  </div>
+  <br>
+  <div class="p-box" name="box3">
+    <table class="table">
+      <tr>
+        <th class="cont">current</th>
+        <th class="cont">initial</th>
+
+      </tr>
+    </table>
+  </div>
+</body>
+
 </html>
